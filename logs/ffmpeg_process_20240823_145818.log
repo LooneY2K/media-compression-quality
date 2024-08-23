@@ -1,0 +1,495 @@
+2024-08-23 14:58:18,441 - INFO - FFmpeg high-quality 10-bit processing script started
+2024-08-23 14:58:18,441 - INFO - Starting high-quality 10-bit video processing for yamaha.mp4
+2024-08-23 14:58:18,441 - INFO - Executing FFmpeg command: ffmpeg -y -i yamaha.mp4 -preset veryslow -crf 18 -maxrate 6000k -bufsize 9000k -pix_fmt yuv420p10le -c:v libx264 -c:a aac -b:a 192k -movflags +faststart yamaha_best.mp4
+2024-08-23 14:58:18,477 - DEBUG - ffmpeg version 7.0.2 Copyright (c) 2000-2024 the FFmpeg developers
+2024-08-23 14:58:18,477 - DEBUG - built with Apple clang version 15.0.0 (clang-1500.3.9.4)
+2024-08-23 14:58:18,477 - DEBUG - configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/7.0.2 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox --enable-neon
+2024-08-23 14:58:18,477 - DEBUG - libavutil      59.  8.100 / 59.  8.100
+2024-08-23 14:58:18,477 - DEBUG - libavcodec     61.  3.100 / 61.  3.100
+2024-08-23 14:58:18,477 - DEBUG - libavformat    61.  1.100 / 61.  1.100
+2024-08-23 14:58:18,477 - DEBUG - libavdevice    61.  1.100 / 61.  1.100
+2024-08-23 14:58:18,477 - DEBUG - libavfilter    10.  1.100 / 10.  1.100
+2024-08-23 14:58:18,477 - DEBUG - libswscale      8.  1.100 /  8.  1.100
+2024-08-23 14:58:18,477 - DEBUG - libswresample   5.  1.100 /  5.  1.100
+2024-08-23 14:58:18,478 - DEBUG - libpostproc    58.  1.100 / 58.  1.100
+2024-08-23 14:58:18,580 - DEBUG - Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'yamaha.mp4':
+2024-08-23 14:58:18,580 - DEBUG - Metadata:
+2024-08-23 14:58:18,580 - DEBUG - major_brand     : mp42
+2024-08-23 14:58:18,580 - DEBUG - minor_version   : 0
+2024-08-23 14:58:18,580 - DEBUG - compatible_brands: mp42mp41
+2024-08-23 14:58:18,580 - DEBUG - creation_time   : 2024-07-09T14:11:58.000000Z
+2024-08-23 14:58:18,580 - DEBUG - Duration: 00:00:20.00, start: 0.000000, bitrate: 5396 kb/s
+2024-08-23 14:58:18,580 - DEBUG - Stream #0:0[0x1](eng): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 3374x4500, 5041 kb/s, 30 fps, 30 tbr, 30k tbn (default)
+2024-08-23 14:58:18,580 - DEBUG - Metadata:
+2024-08-23 14:58:18,580 - DEBUG - creation_time   : 2024-07-09T14:11:58.000000Z
+2024-08-23 14:58:18,580 - DEBUG - handler_name    : ?Mainconcept Video Media Handler
+2024-08-23 14:58:18,580 - DEBUG - vendor_id       : [0][0][0][0]
+2024-08-23 14:58:18,580 - DEBUG - encoder         : AVC Coding
+2024-08-23 14:58:18,580 - DEBUG - Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 317 kb/s (default)
+2024-08-23 14:58:18,580 - DEBUG - Metadata:
+2024-08-23 14:58:18,580 - DEBUG - creation_time   : 2024-07-09T14:11:58.000000Z
+2024-08-23 14:58:18,580 - DEBUG - handler_name    : #Mainconcept MP4 Sound Media Handler
+2024-08-23 14:58:18,580 - DEBUG - vendor_id       : [0][0][0][0]
+2024-08-23 14:58:18,584 - DEBUG - Stream mapping:
+2024-08-23 14:58:18,584 - DEBUG - Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+2024-08-23 14:58:18,584 - DEBUG - Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+2024-08-23 14:58:18,584 - DEBUG - Press [q] to stop, [?] for help
+2024-08-23 14:58:18,629 - DEBUG - [libx264 @ 0x12fd073c0] DPB size (16 frames, 952032 mbs) > level limit (11 frames, 696320 mbs)
+2024-08-23 14:58:18,629 - DEBUG - [libx264 @ 0x12fd073c0] using cpu capabilities: ARMv8 NEON
+2024-08-23 14:58:18,635 - DEBUG - [libx264 @ 0x12fd073c0] profile High 10, level 6.2, 4:2:0, 10-bit
+2024-08-23 14:58:18,635 - DEBUG - [libx264 @ 0x12fd073c0] 264 - core 164 r3108 31e19f9 - H.264/MPEG-4 AVC codec - Copyleft 2003-2023 - http://www.videolan.org/x264.html - options: cabac=1 ref=16 deblock=1:0:0 analyse=0x3:0x133 me=umh subme=10 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=24 chroma_me=1 trellis=2 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=18 lookahead_threads=3 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=8 b_pyramid=2 b_adapt=2 b_bias=0 direct=3 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=60 rc=crf mbtree=1 crf=18.0 qcomp=0.60 qpmin=0 qpmax=81 qpstep=4 vbv_maxrate=6000 vbv_bufsize=9000 crf_max=0.0 nal_hrd=none filler=0 ip_ratio=1.40 aq=1:1.00
+2024-08-23 14:58:18,635 - DEBUG - Output #0, mp4, to 'yamaha_best.mp4':
+2024-08-23 14:58:18,635 - DEBUG - Metadata:
+2024-08-23 14:58:18,635 - DEBUG - major_brand     : mp42
+2024-08-23 14:58:18,635 - DEBUG - minor_version   : 0
+2024-08-23 14:58:18,635 - DEBUG - compatible_brands: mp42mp41
+2024-08-23 14:58:18,635 - DEBUG - encoder         : Lavf61.1.100
+2024-08-23 14:58:18,635 - DEBUG - Stream #0:0(eng): Video: h264 (avc1 / 0x31637661), yuv420p10le(tv, bt709, progressive), 3374x4500, q=2-31, 30 fps, 15360 tbn (default)
+2024-08-23 14:58:18,635 - DEBUG - Metadata:
+2024-08-23 14:58:18,635 - DEBUG - creation_time   : 2024-07-09T14:11:58.000000Z
+2024-08-23 14:58:18,635 - DEBUG - handler_name    : ?Mainconcept Video Media Handler
+2024-08-23 14:58:18,635 - DEBUG - vendor_id       : [0][0][0][0]
+2024-08-23 14:58:18,635 - DEBUG - encoder         : Lavc61.3.100 libx264
+2024-08-23 14:58:18,635 - DEBUG - Side data:
+2024-08-23 14:58:18,635 - DEBUG - cpb: bitrate max/min/avg: 6000000/0/0 buffer size: 9000000 vbv_delay: N/A
+2024-08-23 14:58:18,635 - DEBUG - Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 192 kb/s (default)
+2024-08-23 14:58:18,635 - DEBUG - Metadata:
+2024-08-23 14:58:18,635 - DEBUG - creation_time   : 2024-07-09T14:11:58.000000Z
+2024-08-23 14:58:18,635 - DEBUG - handler_name    : #Mainconcept MP4 Sound Media Handler
+2024-08-23 14:58:18,635 - DEBUG - vendor_id       : [0][0][0][0]
+2024-08-23 14:58:18,635 - DEBUG - encoder         : Lavc61.3.100 aac
+2024-08-23 14:58:19,594 - DEBUG - frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 14:58:20,098 - DEBUG - frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 14:58:20,599 - DEBUG - frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 14:58:21,104 - DEBUG - frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 14:58:21,609 - DEBUG - frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 14:58:22,114 - DEBUG - frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 14:58:22,619 - DEBUG - frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 14:58:23,124 - DEBUG - frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 14:58:23,629 - DEBUG - frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 14:58:24,134 - DEBUG - frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 14:58:24,639 - DEBUG - frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 14:58:25,141 - DEBUG - frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 14:58:25,641 - DEBUG - frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 14:58:26,146 - DEBUG - frame=    4 fps=0.6 q=47.0 size=     256KiB time=00:00:00.06 bitrate=31462.9kbits/s speed=0.00945x
+2024-08-23 14:58:26,651 - DEBUG - frame=   12 fps=1.6 q=41.0 size=     256KiB time=00:00:00.33 bitrate=6292.6kbits/s speed=0.0441x
+2024-08-23 14:58:27,155 - DEBUG - frame=   12 fps=1.5 q=41.0 size=     256KiB time=00:00:00.33 bitrate=6292.6kbits/s speed=0.0413x
+2024-08-23 14:58:27,660 - DEBUG - frame=   21 fps=2.5 q=38.0 size=     256KiB time=00:00:00.63 bitrate=3311.9kbits/s speed=0.0739x
+2024-08-23 14:58:28,160 - DEBUG - frame=   21 fps=2.3 q=38.0 size=     256KiB time=00:00:00.63 bitrate=3311.9kbits/s speed=0.0698x
+2024-08-23 14:58:28,665 - DEBUG - frame=   21 fps=2.2 q=38.0 size=     256KiB time=00:00:00.63 bitrate=3311.9kbits/s speed=0.0661x
+2024-08-23 14:58:29,170 - DEBUG - frame=   21 fps=2.1 q=38.0 size=     256KiB time=00:00:00.63 bitrate=3311.9kbits/s speed=0.0628x
+2024-08-23 14:58:29,676 - DEBUG - frame=   21 fps=2.0 q=38.0 size=     256KiB time=00:00:00.63 bitrate=3311.9kbits/s speed=0.0598x
+2024-08-23 14:58:30,178 - DEBUG - frame=   29 fps=2.6 q=39.0 size=     256KiB time=00:00:00.90 bitrate=2330.6kbits/s speed=0.0812x
+2024-08-23 14:58:30,678 - DEBUG - frame=   29 fps=2.5 q=39.0 size=     256KiB time=00:00:00.90 bitrate=2330.6kbits/s speed=0.0776x
+2024-08-23 14:58:31,183 - DEBUG - frame=   29 fps=2.4 q=39.0 size=     256KiB time=00:00:00.90 bitrate=2330.6kbits/s speed=0.0744x
+2024-08-23 14:58:31,684 - DEBUG - frame=   29 fps=2.3 q=39.0 size=     256KiB time=00:00:00.90 bitrate=2330.6kbits/s speed=0.0714x
+2024-08-23 14:58:32,185 - DEBUG - frame=   30 fps=2.3 q=40.0 size=     256KiB time=00:00:00.93 bitrate=2247.4kbits/s speed=0.0712x
+2024-08-23 14:58:32,685 - DEBUG - frame=   38 fps=2.8 q=40.0 size=     256KiB time=00:00:01.20 bitrate=1747.9kbits/s speed=0.0882x
+2024-08-23 14:58:33,190 - DEBUG - frame=   38 fps=2.7 q=40.0 size=     256KiB time=00:00:01.20 bitrate=1747.9kbits/s speed=0.0851x
+2024-08-23 14:58:33,695 - DEBUG - frame=   38 fps=2.6 q=40.0 size=     256KiB time=00:00:01.20 bitrate=1747.9kbits/s speed=0.0822x
+2024-08-23 14:58:34,201 - DEBUG - frame=   42 fps=2.8 q=40.0 size=     256KiB time=00:00:01.33 bitrate=1573.2kbits/s speed=0.0882x
+2024-08-23 14:58:34,705 - DEBUG - frame=   49 fps=3.1 q=40.0 size=     256KiB time=00:00:01.56 bitrate=1338.9kbits/s speed= 0.1x
+2024-08-23 14:58:35,210 - DEBUG - frame=   49 fps=3.0 q=40.0 size=     256KiB time=00:00:01.56 bitrate=1338.9kbits/s speed=0.0972x
+2024-08-23 14:58:35,712 - DEBUG - frame=   49 fps=2.9 q=40.0 size=     256KiB time=00:00:01.56 bitrate=1338.9kbits/s speed=0.0942x
+2024-08-23 14:58:36,216 - DEBUG - frame=   50 fps=2.9 q=40.0 size=     256KiB time=00:00:01.60 bitrate=1311.0kbits/s speed=0.0934x
+2024-08-23 14:58:36,721 - DEBUG - frame=   56 fps=3.2 q=40.0 size=     256KiB time=00:00:01.80 bitrate=1165.3kbits/s speed=0.102x
+2024-08-23 14:58:37,234 - DEBUG - frame=   59 fps=3.3 q=40.0 size=     256KiB time=00:00:01.90 bitrate=1104.0kbits/s speed=0.105x
+2024-08-23 14:58:37,736 - DEBUG - frame=   65 fps=3.5 q=39.0 size=     256KiB time=00:00:02.10 bitrate= 998.8kbits/s speed=0.113x
+2024-08-23 14:58:38,239 - DEBUG - frame=   65 fps=3.4 q=39.0 size=     256KiB time=00:00:02.10 bitrate= 998.8kbits/s speed=0.11x
+2024-08-23 14:58:38,742 - DEBUG - frame=   66 fps=3.4 q=38.0 size=     256KiB time=00:00:02.13 bitrate= 983.2kbits/s speed=0.109x
+2024-08-23 14:58:39,247 - DEBUG - frame=   74 fps=3.7 q=38.0 size=     256KiB time=00:00:02.40 bitrate= 874.0kbits/s speed=0.119x
+2024-08-23 14:58:39,752 - DEBUG - frame=   74 fps=3.6 q=38.0 size=     256KiB time=00:00:02.40 bitrate= 874.0kbits/s speed=0.116x
+2024-08-23 14:58:40,254 - DEBUG - frame=   75 fps=3.5 q=40.0 size=     256KiB time=00:00:02.43 bitrate= 862.0kbits/s speed=0.115x
+2024-08-23 14:58:40,759 - DEBUG - frame=   78 fps=3.6 q=40.0 size=     256KiB time=00:00:02.53 bitrate= 828.0kbits/s speed=0.117x
+2024-08-23 14:58:41,264 - DEBUG - frame=   83 fps=3.7 q=40.0 size=     256KiB time=00:00:02.70 bitrate= 776.9kbits/s speed=0.122x
+2024-08-23 14:58:41,768 - DEBUG - frame=   87 fps=3.8 q=40.0 size=     256KiB time=00:00:02.83 bitrate= 740.3kbits/s speed=0.125x
+2024-08-23 14:58:42,273 - DEBUG - frame=   91 fps=3.9 q=40.0 size=     256KiB time=00:00:02.96 bitrate= 707.0kbits/s speed=0.128x
+2024-08-23 14:58:42,776 - DEBUG - frame=   91 fps=3.8 q=40.0 size=     256KiB time=00:00:02.96 bitrate= 707.0kbits/s speed=0.125x
+2024-08-23 14:58:43,281 - DEBUG - frame=   91 fps=3.8 q=40.0 size=     256KiB time=00:00:02.96 bitrate= 707.0kbits/s speed=0.123x
+2024-08-23 14:58:43,787 - DEBUG - frame=   91 fps=3.7 q=40.0 size=     256KiB time=00:00:02.96 bitrate= 707.0kbits/s speed=0.12x
+2024-08-23 14:58:44,291 - DEBUG - frame=   91 fps=3.6 q=40.0 size=     256KiB time=00:00:02.96 bitrate= 707.0kbits/s speed=0.118x
+2024-08-23 14:58:44,795 - DEBUG - frame=   92 fps=3.6 q=41.0 size=     256KiB time=00:00:03.00 bitrate= 699.2kbits/s speed=0.117x
+2024-08-23 14:58:45,299 - DEBUG - frame=   94 fps=3.6 q=40.0 size=     256KiB time=00:00:03.06 bitrate= 684.0kbits/s speed=0.117x
+2024-08-23 14:58:45,804 - DEBUG - frame=   95 fps=3.6 q=40.0 size=     256KiB time=00:00:03.10 bitrate= 676.6kbits/s speed=0.116x
+2024-08-23 14:58:46,304 - DEBUG - frame=   97 fps=3.6 q=41.0 size=     512KiB time=00:00:03.16 bitrate=1324.6kbits/s speed=0.116x
+2024-08-23 14:58:46,805 - DEBUG - frame=   98 fps=3.5 q=41.0 size=     512KiB time=00:00:03.20 bitrate=1310.8kbits/s speed=0.115x
+2024-08-23 14:58:47,318 - DEBUG - frame=   99 fps=3.5 q=41.0 size=     512KiB time=00:00:03.23 bitrate=1297.3kbits/s speed=0.115x
+2024-08-23 14:58:47,822 - DEBUG - frame=  100 fps=3.5 q=41.0 size=     512KiB time=00:00:03.26 bitrate=1284.1kbits/s speed=0.114x
+2024-08-23 14:58:48,329 - DEBUG - frame=  101 fps=3.5 q=41.0 size=     512KiB time=00:00:03.30 bitrate=1271.1kbits/s speed=0.113x
+2024-08-23 14:58:48,834 - DEBUG - frame=  103 fps=3.5 q=41.0 size=     512KiB time=00:00:03.36 bitrate=1245.9kbits/s speed=0.113x
+2024-08-23 14:58:49,338 - DEBUG - frame=  104 fps=3.4 q=41.0 size=     512KiB time=00:00:03.40 bitrate=1233.7kbits/s speed=0.112x
+2024-08-23 14:58:49,839 - DEBUG - frame=  104 fps=3.4 q=41.0 size=     512KiB time=00:00:03.40 bitrate=1233.7kbits/s speed=0.111x
+2024-08-23 14:58:50,344 - DEBUG - frame=  106 fps=3.4 q=41.0 size=     512KiB time=00:00:03.46 bitrate=1210.0kbits/s speed=0.111x
+2024-08-23 14:58:50,849 - DEBUG - frame=  108 fps=3.4 q=38.0 size=     512KiB time=00:00:03.53 bitrate=1187.2kbits/s speed=0.111x
+2024-08-23 14:58:51,352 - DEBUG - frame=  109 fps=3.4 q=39.0 size=     512KiB time=00:00:03.56 bitrate=1176.1kbits/s speed=0.111x
+2024-08-23 14:58:51,853 - DEBUG - frame=  113 fps=3.4 q=39.0 size=     768KiB time=00:00:03.70 bitrate=1700.5kbits/s speed=0.113x
+2024-08-23 14:58:52,358 - DEBUG - frame=  117 fps=3.5 q=39.0 size=     768KiB time=00:00:03.83 bitrate=1641.3kbits/s speed=0.115x
+2024-08-23 14:58:52,863 - DEBUG - frame=  118 fps=3.5 q=38.0 size=     768KiB time=00:00:03.86 bitrate=1627.2kbits/s speed=0.114x
+2024-08-23 14:58:53,368 - DEBUG - frame=  122 fps=3.6 q=39.0 size=     768KiB time=00:00:04.00 bitrate=1573.0kbits/s speed=0.117x
+2024-08-23 14:58:53,891 - DEBUG - frame=  123 fps=3.5 q=39.0 size=     768KiB time=00:00:04.03 bitrate=1560.0kbits/s speed=0.116x
+2024-08-23 14:58:54,386 - DEBUG - frame=  123 fps=3.5 q=39.0 size=     768KiB time=00:00:04.03 bitrate=1560.0kbits/s speed=0.114x
+2024-08-23 14:58:54,891 - DEBUG - frame=  125 fps=3.5 q=37.0 size=     768KiB time=00:00:04.10 bitrate=1534.6kbits/s speed=0.115x
+2024-08-23 14:58:55,393 - DEBUG - frame=  125 fps=3.4 q=37.0 size=     768KiB time=00:00:04.10 bitrate=1534.6kbits/s speed=0.113x
+2024-08-23 14:58:55,897 - DEBUG - frame=  126 fps=3.4 q=38.0 size=     768KiB time=00:00:04.13 bitrate=1522.2kbits/s speed=0.112x
+2024-08-23 14:58:56,397 - DEBUG - frame=  132 fps=3.5 q=38.0 size=     768KiB time=00:00:04.33 bitrate=1452.0kbits/s speed=0.116x
+2024-08-23 14:58:56,902 - DEBUG - frame=  133 fps=3.5 q=38.0 size=     768KiB time=00:00:04.36 bitrate=1440.9kbits/s speed=0.115x
+2024-08-23 14:58:57,407 - DEBUG - frame=  134 fps=3.5 q=37.0 size=     768KiB time=00:00:04.40 bitrate=1430.0kbits/s speed=0.115x
+2024-08-23 14:58:57,909 - DEBUG - frame=  138 fps=3.6 q=38.0 size=     768KiB time=00:00:04.53 bitrate=1387.9kbits/s speed=0.117x
+2024-08-23 14:58:58,414 - DEBUG - frame=  141 fps=3.6 q=38.0 size=     768KiB time=00:00:04.63 bitrate=1358.0kbits/s speed=0.118x
+2024-08-23 14:58:58,919 - DEBUG - frame=  141 fps=3.5 q=38.0 size=     768KiB time=00:00:04.63 bitrate=1358.0kbits/s speed=0.116x
+2024-08-23 14:58:59,421 - DEBUG - frame=  142 fps=3.5 q=38.0 size=     768KiB time=00:00:04.66 bitrate=1348.3kbits/s speed=0.116x
+2024-08-23 14:58:59,926 - DEBUG - frame=  145 fps=3.6 q=38.0 size=     768KiB time=00:00:04.76 bitrate=1320.0kbits/s speed=0.117x
+2024-08-23 14:59:00,430 - DEBUG - frame=  148 fps=3.6 q=38.0 size=     768KiB time=00:00:04.86 bitrate=1292.8kbits/s speed=0.118x
+2024-08-23 14:59:00,935 - DEBUG - frame=  150 fps=3.6 q=38.0 size=     768KiB time=00:00:04.93 bitrate=1275.4kbits/s speed=0.118x
+2024-08-23 14:59:01,439 - DEBUG - frame=  154 fps=3.6 q=38.0 size=     768KiB time=00:00:05.06 bitrate=1241.8kbits/s speed=0.12x
+2024-08-23 14:59:01,939 - DEBUG - frame=  154 fps=3.6 q=38.0 size=     768KiB time=00:00:05.06 bitrate=1241.8kbits/s speed=0.118x
+2024-08-23 14:59:02,444 - DEBUG - frame=  156 fps=3.6 q=38.0 size=     768KiB time=00:00:05.13 bitrate=1225.7kbits/s speed=0.118x
+2024-08-23 14:59:02,948 - DEBUG - frame=  160 fps=3.6 q=38.0 size=     768KiB time=00:00:05.26 bitrate=1194.7kbits/s speed=0.12x
+2024-08-23 14:59:03,449 - DEBUG - frame=  162 fps=3.7 q=38.0 size=     768KiB time=00:00:05.33 bitrate=1179.7kbits/s speed=0.12x
+2024-08-23 14:59:03,954 - DEBUG - frame=  162 fps=3.6 q=38.0 size=     768KiB time=00:00:05.33 bitrate=1179.7kbits/s speed=0.119x
+2024-08-23 14:59:04,454 - DEBUG - frame=  164 fps=3.6 q=38.0 size=     768KiB time=00:00:05.40 bitrate=1165.2kbits/s speed=0.119x
+2024-08-23 14:59:04,961 - DEBUG - frame=  168 fps=3.7 q=38.0 size=    1024KiB time=00:00:05.53 bitrate=1516.1kbits/s speed=0.121x
+2024-08-23 14:59:05,466 - DEBUG - frame=  168 fps=3.6 q=38.0 size=    1024KiB time=00:00:05.53 bitrate=1516.1kbits/s speed=0.119x
+2024-08-23 14:59:05,983 - DEBUG - frame=  171 fps=3.6 q=38.0 size=    1024KiB time=00:00:05.63 bitrate=1489.2kbits/s speed=0.12x
+2024-08-23 14:59:06,477 - DEBUG - frame=  176 fps=3.7 q=38.0 size=    1024KiB time=00:00:05.80 bitrate=1446.4kbits/s speed=0.122x
+2024-08-23 14:59:06,980 - DEBUG - frame=  176 fps=3.7 q=38.0 size=    1024KiB time=00:00:05.80 bitrate=1446.4kbits/s speed=0.121x
+2024-08-23 14:59:07,481 - DEBUG - frame=  176 fps=3.6 q=38.0 size=    1024KiB time=00:00:05.80 bitrate=1446.4kbits/s speed=0.12x
+2024-08-23 14:59:07,984 - DEBUG - frame=  180 fps=3.7 q=39.0 size=    1024KiB time=00:00:05.93 bitrate=1413.9kbits/s speed=0.121x
+2024-08-23 14:59:08,484 - DEBUG - frame=  184 fps=3.7 q=41.0 size=    1024KiB time=00:00:06.06 bitrate=1382.8kbits/s speed=0.123x
+2024-08-23 14:59:08,986 - DEBUG - frame=  184 fps=3.7 q=41.0 size=    1024KiB time=00:00:06.06 bitrate=1382.8kbits/s speed=0.122x
+2024-08-23 14:59:09,491 - DEBUG - frame=  185 fps=3.7 q=41.0 size=    1024KiB time=00:00:06.10 bitrate=1375.2kbits/s speed=0.121x
+2024-08-23 14:59:09,996 - DEBUG - frame=  192 fps=3.8 q=41.0 size=    1024KiB time=00:00:06.33 bitrate=1324.6kbits/s speed=0.124x
+2024-08-23 14:59:10,501 - DEBUG - frame=  192 fps=3.7 q=41.0 size=    1024KiB time=00:00:06.33 bitrate=1324.6kbits/s speed=0.123x
+2024-08-23 14:59:11,003 - DEBUG - frame=  192 fps=3.7 q=41.0 size=    1024KiB time=00:00:06.33 bitrate=1324.6kbits/s speed=0.122x
+2024-08-23 14:59:11,504 - DEBUG - frame=  193 fps=3.7 q=41.0 size=    1024KiB time=00:00:06.36 bitrate=1317.6kbits/s speed=0.121x
+2024-08-23 14:59:12,009 - DEBUG - frame=  198 fps=3.7 q=41.0 size=    1024KiB time=00:00:06.53 bitrate=1284.0kbits/s speed=0.123x
+2024-08-23 14:59:12,511 - DEBUG - frame=  198 fps=3.7 q=41.0 size=    1024KiB time=00:00:06.53 bitrate=1284.0kbits/s speed=0.122x
+2024-08-23 14:59:13,019 - DEBUG - frame=  198 fps=3.7 q=41.0 size=    1024KiB time=00:00:06.53 bitrate=1284.0kbits/s speed=0.121x
+2024-08-23 14:59:13,518 - DEBUG - frame=  203 fps=3.7 q=41.0 size=    1024KiB time=00:00:06.70 bitrate=1252.1kbits/s speed=0.123x
+2024-08-23 14:59:14,022 - DEBUG - frame=  203 fps=3.7 q=41.0 size=    1024KiB time=00:00:06.70 bitrate=1252.1kbits/s speed=0.122x
+2024-08-23 14:59:14,525 - DEBUG - frame=  203 fps=3.7 q=41.0 size=    1024KiB time=00:00:06.70 bitrate=1252.1kbits/s speed=0.121x
+2024-08-23 14:59:15,033 - DEBUG - frame=  210 fps=3.8 q=41.0 size=    1024KiB time=00:00:06.93 bitrate=1210.0kbits/s speed=0.124x
+2024-08-23 14:59:15,542 - DEBUG - frame=  212 fps=3.8 q=41.0 size=    1024KiB time=00:00:07.00 bitrate=1198.4kbits/s speed=0.124x
+2024-08-23 14:59:16,041 - DEBUG - frame=  212 fps=3.7 q=41.0 size=    1024KiB time=00:00:07.00 bitrate=1198.4kbits/s speed=0.123x
+2024-08-23 14:59:16,544 - DEBUG - frame=  212 fps=3.7 q=41.0 size=    1024KiB time=00:00:07.00 bitrate=1198.4kbits/s speed=0.122x
+2024-08-23 14:59:17,049 - DEBUG - frame=  212 fps=3.7 q=41.0 size=    1024KiB time=00:00:07.00 bitrate=1198.4kbits/s speed=0.121x
+2024-08-23 14:59:17,556 - DEBUG - frame=  219 fps=3.7 q=40.0 size=    1024KiB time=00:00:07.23 bitrate=1159.8kbits/s speed=0.124x
+2024-08-23 14:59:18,059 - DEBUG - frame=  220 fps=3.7 q=40.0 size=    1024KiB time=00:00:07.26 bitrate=1154.4kbits/s speed=0.123x
+2024-08-23 14:59:18,560 - DEBUG - frame=  220 fps=3.7 q=40.0 size=    1024KiB time=00:00:07.26 bitrate=1154.4kbits/s speed=0.122x
+2024-08-23 14:59:19,065 - DEBUG - frame=  220 fps=3.7 q=40.0 size=    1024KiB time=00:00:07.26 bitrate=1154.4kbits/s speed=0.121x
+2024-08-23 14:59:19,570 - DEBUG - frame=  224 fps=3.7 q=41.0 size=    1024KiB time=00:00:07.40 bitrate=1133.6kbits/s speed=0.122x
+2024-08-23 14:59:20,075 - DEBUG - frame=  224 fps=3.7 q=41.0 size=    1024KiB time=00:00:07.40 bitrate=1133.6kbits/s speed=0.121x
+2024-08-23 14:59:20,579 - DEBUG - frame=  228 fps=3.7 q=42.0 size=    1024KiB time=00:00:07.53 bitrate=1113.6kbits/s speed=0.123x
+2024-08-23 14:59:21,084 - DEBUG - frame=  228 fps=3.7 q=42.0 size=    1024KiB time=00:00:07.53 bitrate=1113.6kbits/s speed=0.122x
+2024-08-23 14:59:21,589 - DEBUG - frame=  232 fps=3.7 q=42.0 size=    1024KiB time=00:00:07.66 bitrate=1094.2kbits/s speed=0.123x
+2024-08-23 14:59:22,094 - DEBUG - frame=  232 fps=3.7 q=42.0 size=    1024KiB time=00:00:07.66 bitrate=1094.2kbits/s speed=0.122x
+2024-08-23 14:59:22,598 - DEBUG - frame=  234 fps=3.7 q=41.0 size=    1024KiB time=00:00:07.73 bitrate=1084.8kbits/s speed=0.122x
+2024-08-23 14:59:23,099 - DEBUG - frame=  238 fps=3.7 q=44.0 size=    1024KiB time=00:00:07.86 bitrate=1066.4kbits/s speed=0.123x
+2024-08-23 14:59:23,607 - DEBUG - frame=  238 fps=3.7 q=44.0 size=    1024KiB time=00:00:07.86 bitrate=1066.4kbits/s speed=0.122x
+2024-08-23 14:59:24,111 - DEBUG - frame=  244 fps=3.8 q=44.0 size=    1280KiB time=00:00:08.06 bitrate=1299.9kbits/s speed=0.124x
+2024-08-23 14:59:24,616 - DEBUG - frame=  244 fps=3.7 q=44.0 size=    1280KiB time=00:00:08.06 bitrate=1299.9kbits/s speed=0.123x
+2024-08-23 14:59:25,121 - DEBUG - frame=  244 fps=3.7 q=44.0 size=    1280KiB time=00:00:08.06 bitrate=1299.9kbits/s speed=0.122x
+2024-08-23 14:59:25,626 - DEBUG - frame=  244 fps=3.7 q=44.0 size=    1280KiB time=00:00:08.06 bitrate=1299.9kbits/s speed=0.121x
+2024-08-23 14:59:26,129 - DEBUG - frame=  252 fps=3.8 q=44.0 size=    1536KiB time=00:00:08.33 bitrate=1510.0kbits/s speed=0.124x
+2024-08-23 14:59:26,634 - DEBUG - frame=  252 fps=3.7 q=44.0 size=    1536KiB time=00:00:08.33 bitrate=1510.0kbits/s speed=0.123x
+2024-08-23 14:59:27,138 - DEBUG - frame=  252 fps=3.7 q=44.0 size=    1536KiB time=00:00:08.33 bitrate=1510.0kbits/s speed=0.122x
+2024-08-23 14:59:27,643 - DEBUG - frame=  252 fps=3.7 q=44.0 size=    1536KiB time=00:00:08.33 bitrate=1510.0kbits/s speed=0.122x
+2024-08-23 14:59:28,148 - DEBUG - frame=  253 fps=3.7 q=42.0 size=    1536KiB time=00:00:08.36 bitrate=1504.0kbits/s speed=0.121x
+2024-08-23 14:59:28,653 - DEBUG - frame=  256 fps=3.7 q=43.0 size=    1536KiB time=00:00:08.46 bitrate=1486.2kbits/s speed=0.122x
+2024-08-23 14:59:29,158 - DEBUG - frame=  256 fps=3.7 q=43.0 size=    1536KiB time=00:00:08.46 bitrate=1486.2kbits/s speed=0.121x
+2024-08-23 14:59:29,663 - DEBUG - frame=  256 fps=3.6 q=43.0 size=    1536KiB time=00:00:08.46 bitrate=1486.2kbits/s speed=0.12x
+2024-08-23 14:59:30,167 - DEBUG - frame=  260 fps=3.7 q=42.0 size=    1792KiB time=00:00:08.60 bitrate=1707.0kbits/s speed=0.121x
+2024-08-23 14:59:30,672 - DEBUG - frame=  260 fps=3.6 q=42.0 size=    1792KiB time=00:00:08.60 bitrate=1707.0kbits/s speed=0.12x
+2024-08-23 14:59:31,177 - DEBUG - frame=  264 fps=3.7 q=42.0 size=    1792KiB time=00:00:08.73 bitrate=1681.0kbits/s speed=0.121x
+2024-08-23 14:59:31,677 - DEBUG - frame=  264 fps=3.6 q=42.0 size=    1792KiB time=00:00:08.73 bitrate=1681.0kbits/s speed=0.12x
+2024-08-23 14:59:32,182 - DEBUG - frame=  264 fps=3.6 q=42.0 size=    1792KiB time=00:00:08.73 bitrate=1681.0kbits/s speed=0.119x
+2024-08-23 14:59:32,687 - DEBUG - frame=  268 fps=3.6 q=42.0 size=    1792KiB time=00:00:08.86 bitrate=1655.7kbits/s speed=0.12x
+2024-08-23 14:59:33,192 - DEBUG - frame=  268 fps=3.6 q=42.0 size=    1792KiB time=00:00:08.86 bitrate=1655.7kbits/s speed=0.12x
+2024-08-23 14:59:33,700 - DEBUG - frame=  268 fps=3.6 q=42.0 size=    1792KiB time=00:00:08.86 bitrate=1655.7kbits/s speed=0.119x
+2024-08-23 14:59:34,202 - DEBUG - frame=  270 fps=3.6 q=41.0 size=    1792KiB time=00:00:08.93 bitrate=1643.3kbits/s speed=0.119x
+2024-08-23 14:59:34,707 - DEBUG - frame=  272 fps=3.6 q=41.0 size=    1792KiB time=00:00:09.00 bitrate=1631.2kbits/s speed=0.119x
+2024-08-23 14:59:35,217 - DEBUG - frame=  272 fps=3.6 q=41.0 size=    1792KiB time=00:00:09.00 bitrate=1631.2kbits/s speed=0.118x
+2024-08-23 14:59:35,719 - DEBUG - frame=  274 fps=3.6 q=41.0 size=    1792KiB time=00:00:09.06 bitrate=1619.2kbits/s speed=0.118x
+2024-08-23 14:59:36,221 - DEBUG - frame=  277 fps=3.6 q=41.0 size=    1792KiB time=00:00:09.16 bitrate=1601.5kbits/s speed=0.119x
+2024-08-23 14:59:36,726 - DEBUG - frame=  278 fps=3.6 q=41.0 size=    1792KiB time=00:00:09.20 bitrate=1595.7kbits/s speed=0.118x
+2024-08-23 14:59:37,227 - DEBUG - frame=  278 fps=3.6 q=41.0 size=    1792KiB time=00:00:09.20 bitrate=1595.7kbits/s speed=0.118x
+2024-08-23 14:59:37,728 - DEBUG - frame=  282 fps=3.6 q=41.0 size=    1792KiB time=00:00:09.33 bitrate=1572.9kbits/s speed=0.119x
+2024-08-23 14:59:38,238 - DEBUG - frame=  282 fps=3.6 q=41.0 size=    1792KiB time=00:00:09.33 bitrate=1572.9kbits/s speed=0.118x
+2024-08-23 14:59:38,728 - DEBUG - frame=  282 fps=3.5 q=41.0 size=    1792KiB time=00:00:09.33 bitrate=1572.9kbits/s speed=0.117x
+2024-08-23 14:59:39,233 - DEBUG - frame=  283 fps=3.5 q=41.0 size=    1792KiB time=00:00:09.36 bitrate=1567.3kbits/s speed=0.117x
+2024-08-23 14:59:39,738 - DEBUG - frame=  285 fps=3.5 q=41.0 size=    2048KiB time=00:00:09.43 bitrate=1778.5kbits/s speed=0.117x
+2024-08-23 14:59:40,243 - DEBUG - frame=  286 fps=3.5 q=41.0 size=    2048KiB time=00:00:09.46 bitrate=1772.3kbits/s speed=0.117x
+2024-08-23 14:59:40,745 - DEBUG - frame=  286 fps=3.5 q=41.0 size=    2048KiB time=00:00:09.46 bitrate=1772.3kbits/s speed=0.116x
+2024-08-23 14:59:41,250 - DEBUG - frame=  287 fps=3.5 q=41.0 size=    2048KiB time=00:00:09.50 bitrate=1766.1kbits/s speed=0.116x
+2024-08-23 14:59:41,751 - DEBUG - frame=  290 fps=3.5 q=41.0 size=    2048KiB time=00:00:09.60 bitrate=1747.7kbits/s speed=0.116x
+2024-08-23 14:59:42,256 - DEBUG - frame=  290 fps=3.5 q=41.0 size=    2048KiB time=00:00:09.60 bitrate=1747.7kbits/s speed=0.115x
+2024-08-23 14:59:42,756 - DEBUG - frame=  290 fps=3.5 q=41.0 size=    2048KiB time=00:00:09.60 bitrate=1747.7kbits/s speed=0.115x
+2024-08-23 14:59:43,261 - DEBUG - frame=  291 fps=3.5 q=41.0 size=    2048KiB time=00:00:09.63 bitrate=1741.6kbits/s speed=0.114x
+2024-08-23 14:59:43,766 - DEBUG - frame=  291 fps=3.4 q=41.0 size=    2048KiB time=00:00:09.63 bitrate=1741.6kbits/s speed=0.114x
+2024-08-23 14:59:44,269 - DEBUG - frame=  292 fps=3.4 q=41.0 size=    2048KiB time=00:00:09.66 bitrate=1735.6kbits/s speed=0.113x
+2024-08-23 14:59:44,774 - DEBUG - frame=  295 fps=3.4 q=41.0 size=    2048KiB time=00:00:09.76 bitrate=1717.8kbits/s speed=0.114x
+2024-08-23 14:59:45,287 - DEBUG - frame=  295 fps=3.4 q=41.0 size=    2048KiB time=00:00:09.76 bitrate=1717.8kbits/s speed=0.113x
+2024-08-23 14:59:45,793 - DEBUG - frame=  297 fps=3.4 q=41.0 size=    2048KiB time=00:00:09.83 bitrate=1706.2kbits/s speed=0.113x
+2024-08-23 14:59:46,295 - DEBUG - frame=  300 fps=3.4 q=41.0 size=    2048KiB time=00:00:09.93 bitrate=1689.0kbits/s speed=0.114x
+2024-08-23 14:59:46,795 - DEBUG - frame=  300 fps=3.4 q=41.0 size=    2048KiB time=00:00:09.93 bitrate=1689.0kbits/s speed=0.113x
+2024-08-23 14:59:47,302 - DEBUG - frame=  300 fps=3.4 q=41.0 size=    2048KiB time=00:00:09.93 bitrate=1689.0kbits/s speed=0.113x
+2024-08-23 14:59:47,806 - DEBUG - frame=  300 fps=3.4 q=41.0 size=    2048KiB time=00:00:09.93 bitrate=1689.0kbits/s speed=0.112x
+2024-08-23 14:59:48,311 - DEBUG - frame=  300 fps=3.4 q=41.0 size=    2048KiB time=00:00:09.93 bitrate=1689.0kbits/s speed=0.111x
+2024-08-23 14:59:48,816 - DEBUG - frame=  300 fps=3.3 q=41.0 size=    2048KiB time=00:00:09.93 bitrate=1689.0kbits/s speed=0.111x
+2024-08-23 14:59:49,318 - DEBUG - frame=  300 fps=3.3 q=41.0 size=    2048KiB time=00:00:09.93 bitrate=1689.0kbits/s speed=0.11x
+2024-08-23 14:59:49,827 - DEBUG - frame=  300 fps=3.3 q=41.0 size=    2048KiB time=00:00:09.93 bitrate=1689.0kbits/s speed=0.109x
+2024-08-23 14:59:50,326 - DEBUG - frame=  300 fps=3.3 q=41.0 size=    2048KiB time=00:00:09.93 bitrate=1689.0kbits/s speed=0.109x
+2024-08-23 14:59:50,833 - DEBUG - frame=  300 fps=3.3 q=41.0 size=    2048KiB time=00:00:09.93 bitrate=1689.0kbits/s speed=0.108x
+2024-08-23 14:59:51,338 - DEBUG - frame=  300 fps=3.3 q=41.0 size=    2048KiB time=00:00:09.93 bitrate=1689.0kbits/s speed=0.108x
+2024-08-23 14:59:51,843 - DEBUG - frame=  303 fps=3.3 q=41.0 size=    2304KiB time=00:00:10.03 bitrate=1881.2kbits/s speed=0.108x
+2024-08-23 14:59:52,343 - DEBUG - frame=  304 fps=3.3 q=41.0 size=    2304KiB time=00:00:10.06 bitrate=1875.0kbits/s speed=0.108x
+2024-08-23 14:59:52,848 - DEBUG - frame=  305 fps=3.3 q=41.0 size=    2304KiB time=00:00:10.10 bitrate=1868.8kbits/s speed=0.108x
+2024-08-23 14:59:53,351 - DEBUG - frame=  308 fps=3.3 q=42.0 size=    2304KiB time=00:00:10.20 bitrate=1850.5kbits/s speed=0.108x
+2024-08-23 14:59:53,856 - DEBUG - frame=  310 fps=3.3 q=42.0 size=    2304KiB time=00:00:10.26 bitrate=1838.4kbits/s speed=0.108x
+2024-08-23 14:59:54,356 - DEBUG - frame=  310 fps=3.3 q=42.0 size=    2304KiB time=00:00:10.26 bitrate=1838.4kbits/s speed=0.108x
+2024-08-23 14:59:54,861 - DEBUG - frame=  312 fps=3.3 q=42.0 size=    2304KiB time=00:00:10.33 bitrate=1826.6kbits/s speed=0.108x
+2024-08-23 14:59:55,379 - DEBUG - frame=  314 fps=3.3 q=42.0 size=    2304KiB time=00:00:10.40 bitrate=1814.9kbits/s speed=0.108x
+2024-08-23 14:59:55,875 - DEBUG - frame=  315 fps=3.3 q=42.0 size=    2304KiB time=00:00:10.43 bitrate=1809.1kbits/s speed=0.108x
+2024-08-23 14:59:56,380 - DEBUG - frame=  317 fps=3.3 q=42.0 size=    2304KiB time=00:00:10.50 bitrate=1797.6kbits/s speed=0.108x
+2024-08-23 14:59:56,885 - DEBUG - frame=  317 fps=3.2 q=42.0 size=    2304KiB time=00:00:10.50 bitrate=1797.6kbits/s speed=0.107x
+2024-08-23 14:59:57,390 - DEBUG - frame=  317 fps=3.2 q=42.0 size=    2304KiB time=00:00:10.50 bitrate=1797.6kbits/s speed=0.107x
+2024-08-23 14:59:57,892 - DEBUG - frame=  317 fps=3.2 q=42.0 size=    2304KiB time=00:00:10.50 bitrate=1797.6kbits/s speed=0.106x
+2024-08-23 14:59:58,396 - DEBUG - frame=  317 fps=3.2 q=42.0 size=    2304KiB time=00:00:10.50 bitrate=1797.6kbits/s speed=0.106x
+2024-08-23 14:59:58,897 - DEBUG - frame=  317 fps=3.2 q=42.0 size=    2304KiB time=00:00:10.50 bitrate=1797.6kbits/s speed=0.105x
+2024-08-23 14:59:59,402 - DEBUG - frame=  317 fps=3.2 q=42.0 size=    2304KiB time=00:00:10.50 bitrate=1797.6kbits/s speed=0.105x
+2024-08-23 14:59:59,905 - DEBUG - frame=  317 fps=3.1 q=42.0 size=    2304KiB time=00:00:10.50 bitrate=1797.6kbits/s speed=0.104x
+2024-08-23 15:00:00,407 - DEBUG - frame=  317 fps=3.1 q=42.0 size=    2304KiB time=00:00:10.50 bitrate=1797.6kbits/s speed=0.104x
+2024-08-23 15:00:00,908 - DEBUG - frame=  317 fps=3.1 q=42.0 size=    2304KiB time=00:00:10.50 bitrate=1797.6kbits/s speed=0.103x
+2024-08-23 15:00:01,408 - DEBUG - frame=  317 fps=3.1 q=42.0 size=    2304KiB time=00:00:10.50 bitrate=1797.6kbits/s speed=0.103x
+2024-08-23 15:00:01,910 - DEBUG - frame=  317 fps=3.1 q=42.0 size=    2304KiB time=00:00:10.50 bitrate=1797.6kbits/s speed=0.102x
+2024-08-23 15:00:02,415 - DEBUG - frame=  317 fps=3.1 q=42.0 size=    2304KiB time=00:00:10.50 bitrate=1797.6kbits/s speed=0.102x
+2024-08-23 15:00:02,920 - DEBUG - frame=  317 fps=3.1 q=42.0 size=    2304KiB time=00:00:10.50 bitrate=1797.6kbits/s speed=0.101x
+2024-08-23 15:00:03,425 - DEBUG - frame=  317 fps=3.0 q=42.0 size=    2304KiB time=00:00:10.50 bitrate=1797.6kbits/s speed=0.101x
+2024-08-23 15:00:03,926 - DEBUG - frame=  317 fps=3.0 q=42.0 size=    2304KiB time=00:00:10.50 bitrate=1797.6kbits/s speed= 0.1x
+2024-08-23 15:00:04,431 - DEBUG - frame=  317 fps=3.0 q=42.0 size=    2304KiB time=00:00:10.50 bitrate=1797.6kbits/s speed=0.0997x
+2024-08-23 15:00:04,936 - DEBUG - frame=  317 fps=3.0 q=42.0 size=    2304KiB time=00:00:10.50 bitrate=1797.6kbits/s speed=0.0992x
+2024-08-23 15:00:05,441 - DEBUG - frame=  319 fps=3.0 q=42.0 size=    2304KiB time=00:00:10.56 bitrate=1786.3kbits/s speed=0.0994x
+2024-08-23 15:00:05,946 - DEBUG - frame=  321 fps=3.0 q=42.0 size=    2304KiB time=00:00:10.63 bitrate=1775.1kbits/s speed=0.0995x
+2024-08-23 15:00:06,451 - DEBUG - frame=  321 fps=3.0 q=42.0 size=    2304KiB time=00:00:10.63 bitrate=1775.1kbits/s speed=0.099x
+2024-08-23 15:00:06,953 - DEBUG - frame=  322 fps=3.0 q=42.0 size=    2560KiB time=00:00:10.66 bitrate=1966.1kbits/s speed=0.0989x
+2024-08-23 15:00:07,458 - DEBUG - frame=  325 fps=3.0 q=42.0 size=    2560KiB time=00:00:10.76 bitrate=1947.9kbits/s speed=0.0994x
+2024-08-23 15:00:07,963 - DEBUG - frame=  327 fps=3.0 q=42.0 size=    2560KiB time=00:00:10.83 bitrate=1935.9kbits/s speed=0.0995x
+2024-08-23 15:00:08,464 - DEBUG - frame=  329 fps=3.0 q=42.0 size=    2560KiB time=00:00:10.90 bitrate=1924.0kbits/s speed=0.0997x
+2024-08-23 15:00:08,966 - DEBUG - frame=  330 fps=3.0 q=42.0 size=    2560KiB time=00:00:10.93 bitrate=1918.2kbits/s speed=0.0995x
+2024-08-23 15:00:09,467 - DEBUG - frame=  330 fps=3.0 q=42.0 size=    2560KiB time=00:00:10.93 bitrate=1918.2kbits/s speed=0.099x
+2024-08-23 15:00:09,972 - DEBUG - frame=  330 fps=3.0 q=42.0 size=    2560KiB time=00:00:10.93 bitrate=1918.2kbits/s speed=0.0986x
+2024-08-23 15:00:10,477 - DEBUG - frame=  330 fps=3.0 q=42.0 size=    2560KiB time=00:00:10.93 bitrate=1918.2kbits/s speed=0.0982x
+2024-08-23 15:00:10,981 - DEBUG - frame=  330 fps=2.9 q=42.0 size=    2560KiB time=00:00:10.93 bitrate=1918.2kbits/s speed=0.0977x
+2024-08-23 15:00:11,485 - DEBUG - frame=  330 fps=2.9 q=42.0 size=    2560KiB time=00:00:10.93 bitrate=1918.2kbits/s speed=0.0973x
+2024-08-23 15:00:11,988 - DEBUG - frame=  330 fps=2.9 q=42.0 size=    2560KiB time=00:00:10.93 bitrate=1918.2kbits/s speed=0.0968x
+2024-08-23 15:00:12,493 - DEBUG - frame=  330 fps=2.9 q=42.0 size=    2560KiB time=00:00:10.93 bitrate=1918.2kbits/s speed=0.0964x
+2024-08-23 15:00:12,997 - DEBUG - frame=  330 fps=2.9 q=42.0 size=    2560KiB time=00:00:10.93 bitrate=1918.2kbits/s speed=0.096x
+2024-08-23 15:00:13,504 - DEBUG - frame=  331 fps=2.9 q=42.0 size=    2560KiB time=00:00:10.96 bitrate=1912.3kbits/s speed=0.0959x
+2024-08-23 15:00:14,005 - DEBUG - frame=  334 fps=2.9 q=42.0 size=    2560KiB time=00:00:11.06 bitrate=1895.1kbits/s speed=0.0963x
+2024-08-23 15:00:14,505 - DEBUG - frame=  335 fps=2.9 q=42.0 size=    2560KiB time=00:00:11.10 bitrate=1889.4kbits/s speed=0.0962x
+2024-08-23 15:00:15,008 - DEBUG - frame=  335 fps=2.9 q=42.0 size=    2560KiB time=00:00:11.10 bitrate=1889.4kbits/s speed=0.0958x
+2024-08-23 15:00:15,512 - DEBUG - frame=  336 fps=2.9 q=42.0 size=    2560KiB time=00:00:11.13 bitrate=1883.7kbits/s speed=0.0956x
+2024-08-23 15:00:16,015 - DEBUG - frame=  336 fps=2.9 q=42.0 size=    2560KiB time=00:00:11.13 bitrate=1883.7kbits/s speed=0.0952x
+2024-08-23 15:00:16,517 - DEBUG - frame=  339 fps=2.9 q=42.0 size=    2816KiB time=00:00:11.23 bitrate=2053.6kbits/s speed=0.0957x
+2024-08-23 15:00:17,017 - DEBUG - frame=  340 fps=2.9 q=42.0 size=    2816KiB time=00:00:11.26 bitrate=2047.5kbits/s speed=0.0955x
+2024-08-23 15:00:17,521 - DEBUG - frame=  340 fps=2.9 q=42.0 size=    2816KiB time=00:00:11.26 bitrate=2047.5kbits/s speed=0.0951x
+2024-08-23 15:00:18,026 - DEBUG - frame=  343 fps=2.9 q=42.0 size=    2816KiB time=00:00:11.36 bitrate=2029.5kbits/s speed=0.0956x
+2024-08-23 15:00:18,531 - DEBUG - frame=  344 fps=2.9 q=42.0 size=    2816KiB time=00:00:11.40 bitrate=2023.6kbits/s speed=0.0954x
+2024-08-23 15:00:19,040 - DEBUG - frame=  344 fps=2.9 q=42.0 size=    2816KiB time=00:00:11.40 bitrate=2023.6kbits/s speed=0.095x
+2024-08-23 15:00:19,543 - DEBUG - frame=  346 fps=2.9 q=42.0 size=    2816KiB time=00:00:11.46 bitrate=2011.8kbits/s speed=0.0952x
+2024-08-23 15:00:20,047 - DEBUG - frame=  348 fps=2.9 q=42.0 size=    2816KiB time=00:00:11.53 bitrate=2000.2kbits/s speed=0.0953x
+2024-08-23 15:00:20,551 - DEBUG - frame=  348 fps=2.9 q=42.0 size=    2816KiB time=00:00:11.53 bitrate=2000.2kbits/s speed=0.095x
+2024-08-23 15:00:21,054 - DEBUG - frame=  348 fps=2.9 q=42.0 size=    2816KiB time=00:00:11.53 bitrate=2000.2kbits/s speed=0.0946x
+2024-08-23 15:00:21,557 - DEBUG - frame=  348 fps=2.8 q=42.0 size=    2816KiB time=00:00:11.53 bitrate=2000.2kbits/s speed=0.0942x
+2024-08-23 15:00:22,063 - DEBUG - frame=  348 fps=2.8 q=42.0 size=    2816KiB time=00:00:11.53 bitrate=2000.2kbits/s speed=0.0938x
+2024-08-23 15:00:22,568 - DEBUG - frame=  348 fps=2.8 q=42.0 size=    2816KiB time=00:00:11.53 bitrate=2000.2kbits/s speed=0.0934x
+2024-08-23 15:00:23,073 - DEBUG - frame=  348 fps=2.8 q=42.0 size=    2816KiB time=00:00:11.53 bitrate=2000.2kbits/s speed=0.093x
+2024-08-23 15:00:23,578 - DEBUG - frame=  348 fps=2.8 q=42.0 size=    2816KiB time=00:00:11.53 bitrate=2000.2kbits/s speed=0.0926x
+2024-08-23 15:00:24,083 - DEBUG - frame=  348 fps=2.8 q=42.0 size=    2816KiB time=00:00:11.53 bitrate=2000.2kbits/s speed=0.0923x
+2024-08-23 15:00:24,588 - DEBUG - frame=  348 fps=2.8 q=42.0 size=    2816KiB time=00:00:11.53 bitrate=2000.2kbits/s speed=0.0919x
+2024-08-23 15:00:25,093 - DEBUG - frame=  348 fps=2.8 q=42.0 size=    2816KiB time=00:00:11.53 bitrate=2000.2kbits/s speed=0.0915x
+2024-08-23 15:00:25,603 - DEBUG - frame=  352 fps=2.8 q=42.0 size=    2816KiB time=00:00:11.66 bitrate=1977.3kbits/s speed=0.0922x
+2024-08-23 15:00:26,104 - DEBUG - frame=  352 fps=2.8 q=42.0 size=    2816KiB time=00:00:11.66 bitrate=1977.3kbits/s speed=0.0919x
+2024-08-23 15:00:26,618 - DEBUG - frame=  356 fps=2.8 q=42.0 size=    2816KiB time=00:00:11.80 bitrate=1955.0kbits/s speed=0.0925x
+2024-08-23 15:00:27,118 - DEBUG - frame=  356 fps=2.8 q=42.0 size=    2816KiB time=00:00:11.80 bitrate=1955.0kbits/s speed=0.0922x
+2024-08-23 15:00:27,623 - DEBUG - frame=  359 fps=2.8 q=42.0 size=    3072KiB time=00:00:11.90 bitrate=2114.8kbits/s speed=0.0926x
+2024-08-23 15:00:28,128 - DEBUG - frame=  359 fps=2.8 q=42.0 size=    3072KiB time=00:00:11.90 bitrate=2114.8kbits/s speed=0.0922x
+2024-08-23 15:00:28,634 - DEBUG - frame=  359 fps=2.8 q=42.0 size=    3072KiB time=00:00:11.90 bitrate=2114.8kbits/s speed=0.0919x
+2024-08-23 15:00:29,148 - DEBUG - frame=  359 fps=2.8 q=42.0 size=    3072KiB time=00:00:11.90 bitrate=2114.8kbits/s speed=0.0915x
+2024-08-23 15:00:29,652 - DEBUG - frame=  359 fps=2.7 q=42.0 size=    3072KiB time=00:00:11.90 bitrate=2114.8kbits/s speed=0.0911x
+2024-08-23 15:00:30,158 - DEBUG - frame=  359 fps=2.7 q=42.0 size=    3072KiB time=00:00:11.90 bitrate=2114.8kbits/s speed=0.0908x
+2024-08-23 15:00:30,659 - DEBUG - frame=  359 fps=2.7 q=42.0 size=    3072KiB time=00:00:11.90 bitrate=2114.8kbits/s speed=0.0904x
+2024-08-23 15:00:31,171 - DEBUG - frame=  359 fps=2.7 q=42.0 size=    3072KiB time=00:00:11.90 bitrate=2114.8kbits/s speed=0.0901x
+2024-08-23 15:00:31,673 - DEBUG - frame=  359 fps=2.7 q=42.0 size=    3072KiB time=00:00:11.90 bitrate=2114.8kbits/s speed=0.0898x
+2024-08-23 15:00:32,178 - DEBUG - frame=  359 fps=2.7 q=42.0 size=    3072KiB time=00:00:11.90 bitrate=2114.8kbits/s speed=0.0894x
+2024-08-23 15:00:32,679 - DEBUG - frame=  359 fps=2.7 q=42.0 size=    3072KiB time=00:00:11.90 bitrate=2114.8kbits/s speed=0.0891x
+2024-08-23 15:00:33,180 - DEBUG - frame=  359 fps=2.7 q=42.0 size=    3072KiB time=00:00:11.90 bitrate=2114.8kbits/s speed=0.0887x
+2024-08-23 15:00:33,681 - DEBUG - frame=  361 fps=2.7 q=42.0 size=    3072KiB time=00:00:11.96 bitrate=2103.0kbits/s speed=0.0889x
+2024-08-23 15:00:34,186 - DEBUG - frame=  364 fps=2.7 q=42.0 size=    3072KiB time=00:00:12.06 bitrate=2085.6kbits/s speed=0.0893x
+2024-08-23 15:00:34,687 - DEBUG - frame=  370 fps=2.7 q=41.0 size=    3072KiB time=00:00:12.26 bitrate=2051.6kbits/s speed=0.0905x
+2024-08-23 15:00:35,192 - DEBUG - frame=  373 fps=2.7 q=41.0 size=    3072KiB time=00:00:12.36 bitrate=2035.0kbits/s speed=0.0909x
+2024-08-23 15:00:35,692 - DEBUG - frame=  375 fps=2.7 q=41.0 size=    3328KiB time=00:00:12.43 bitrate=2192.8kbits/s speed=0.091x
+2024-08-23 15:00:36,197 - DEBUG - frame=  375 fps=2.7 q=41.0 size=    3328KiB time=00:00:12.43 bitrate=2192.8kbits/s speed=0.0907x
+2024-08-23 15:00:36,703 - DEBUG - frame=  377 fps=2.7 q=41.0 size=    3328KiB time=00:00:12.50 bitrate=2181.1kbits/s speed=0.0908x
+2024-08-23 15:00:37,209 - DEBUG - frame=  377 fps=2.7 q=41.0 size=    3328KiB time=00:00:12.50 bitrate=2181.1kbits/s speed=0.0905x
+2024-08-23 15:00:37,710 - DEBUG - frame=  377 fps=2.7 q=41.0 size=    3328KiB time=00:00:12.50 bitrate=2181.1kbits/s speed=0.0902x
+2024-08-23 15:00:38,217 - DEBUG - frame=  377 fps=2.7 q=41.0 size=    3328KiB time=00:00:12.50 bitrate=2181.1kbits/s speed=0.0898x
+2024-08-23 15:00:38,726 - DEBUG - frame=  377 fps=2.7 q=41.0 size=    3328KiB time=00:00:12.50 bitrate=2181.1kbits/s speed=0.0895x
+2024-08-23 15:00:39,229 - DEBUG - frame=  377 fps=2.7 q=41.0 size=    3328KiB time=00:00:12.50 bitrate=2181.1kbits/s speed=0.0892x
+2024-08-23 15:00:39,731 - DEBUG - frame=  377 fps=2.7 q=41.0 size=    3328KiB time=00:00:12.50 bitrate=2181.1kbits/s speed=0.0889x
+2024-08-23 15:00:40,234 - DEBUG - frame=  377 fps=2.7 q=41.0 size=    3328KiB time=00:00:12.50 bitrate=2181.1kbits/s speed=0.0886x
+2024-08-23 15:00:40,736 - DEBUG - frame=  378 fps=2.7 q=41.0 size=    3328KiB time=00:00:12.53 bitrate=2175.3kbits/s speed=0.0885x
+2024-08-23 15:00:41,241 - DEBUG - frame=  378 fps=2.7 q=41.0 size=    3328KiB time=00:00:12.53 bitrate=2175.3kbits/s speed=0.0882x
+2024-08-23 15:00:41,747 - DEBUG - frame=  378 fps=2.6 q=41.0 size=    3328KiB time=00:00:12.53 bitrate=2175.3kbits/s speed=0.0879x
+2024-08-23 15:00:42,253 - DEBUG - frame=  378 fps=2.6 q=41.0 size=    3328KiB time=00:00:12.53 bitrate=2175.3kbits/s speed=0.0875x
+2024-08-23 15:00:42,754 - DEBUG - frame=  381 fps=2.7 q=41.0 size=    3328KiB time=00:00:12.63 bitrate=2158.0kbits/s speed=0.0879x
+2024-08-23 15:00:43,260 - DEBUG - frame=  382 fps=2.6 q=41.0 size=    3328KiB time=00:00:12.66 bitrate=2152.4kbits/s speed=0.0879x
+2024-08-23 15:00:43,761 - DEBUG - frame=  382 fps=2.6 q=41.0 size=    3328KiB time=00:00:12.66 bitrate=2152.4kbits/s speed=0.0876x
+2024-08-23 15:00:44,273 - DEBUG - frame=  382 fps=2.6 q=41.0 size=    3328KiB time=00:00:12.66 bitrate=2152.4kbits/s speed=0.0872x
+2024-08-23 15:00:44,772 - DEBUG - frame=  382 fps=2.6 q=41.0 size=    3328KiB time=00:00:12.66 bitrate=2152.4kbits/s speed=0.0869x
+2024-08-23 15:00:45,276 - DEBUG - frame=  383 fps=2.6 q=41.0 size=    3328KiB time=00:00:12.70 bitrate=2146.7kbits/s speed=0.0869x
+2024-08-23 15:00:45,779 - DEBUG - frame=  386 fps=2.6 q=41.0 size=    3328KiB time=00:00:12.80 bitrate=2129.9kbits/s speed=0.0873x
+2024-08-23 15:00:46,284 - DEBUG - frame=  386 fps=2.6 q=41.0 size=    3328KiB time=00:00:12.80 bitrate=2129.9kbits/s speed=0.087x
+2024-08-23 15:00:46,785 - DEBUG - frame=  387 fps=2.6 q=41.0 size=    3328KiB time=00:00:12.83 bitrate=2124.4kbits/s speed=0.0869x
+2024-08-23 15:00:47,290 - DEBUG - frame=  388 fps=2.6 q=41.0 size=    3328KiB time=00:00:12.86 bitrate=2118.9kbits/s speed=0.0868x
+2024-08-23 15:00:47,795 - DEBUG - frame=  388 fps=2.6 q=41.0 size=    3328KiB time=00:00:12.86 bitrate=2118.9kbits/s speed=0.0865x
+2024-08-23 15:00:48,305 - DEBUG - frame=  388 fps=2.6 q=41.0 size=    3328KiB time=00:00:12.86 bitrate=2118.9kbits/s speed=0.0862x
+2024-08-23 15:00:48,808 - DEBUG - frame=  388 fps=2.6 q=41.0 size=    3328KiB time=00:00:12.86 bitrate=2118.9kbits/s speed=0.0859x
+2024-08-23 15:00:49,320 - DEBUG - frame=  388 fps=2.6 q=41.0 size=    3328KiB time=00:00:12.86 bitrate=2118.9kbits/s speed=0.0856x
+2024-08-23 15:00:49,822 - DEBUG - frame=  388 fps=2.6 q=41.0 size=    3328KiB time=00:00:12.86 bitrate=2118.9kbits/s speed=0.0854x
+2024-08-23 15:00:50,327 - DEBUG - frame=  388 fps=2.6 q=41.0 size=    3328KiB time=00:00:12.86 bitrate=2118.9kbits/s speed=0.0851x
+2024-08-23 15:00:50,832 - DEBUG - frame=  388 fps=2.6 q=41.0 size=    3328KiB time=00:00:12.86 bitrate=2118.9kbits/s speed=0.0848x
+2024-08-23 15:00:51,337 - DEBUG - frame=  388 fps=2.5 q=41.0 size=    3328KiB time=00:00:12.86 bitrate=2118.9kbits/s speed=0.0845x
+2024-08-23 15:00:51,842 - DEBUG - frame=  388 fps=2.5 q=41.0 size=    3328KiB time=00:00:12.86 bitrate=2118.9kbits/s speed=0.0842x
+2024-08-23 15:00:52,347 - DEBUG - frame=  392 fps=2.6 q=41.0 size=    3584KiB time=00:00:13.00 bitrate=2258.5kbits/s speed=0.0848x
+2024-08-23 15:00:52,852 - DEBUG - frame=  392 fps=2.5 q=41.0 size=    3584KiB time=00:00:13.00 bitrate=2258.5kbits/s speed=0.0845x
+2024-08-23 15:00:53,357 - DEBUG - frame=  392 fps=2.5 q=41.0 size=    3584KiB time=00:00:13.00 bitrate=2258.5kbits/s speed=0.0843x
+2024-08-23 15:00:53,860 - DEBUG - frame=  392 fps=2.5 q=41.0 size=    3584KiB time=00:00:13.00 bitrate=2258.5kbits/s speed=0.084x
+2024-08-23 15:00:54,360 - DEBUG - frame=  392 fps=2.5 q=41.0 size=    3584KiB time=00:00:13.00 bitrate=2258.5kbits/s speed=0.0837x
+2024-08-23 15:00:54,866 - DEBUG - frame=  392 fps=2.5 q=41.0 size=    3584KiB time=00:00:13.00 bitrate=2258.5kbits/s speed=0.0835x
+2024-08-23 15:00:55,372 - DEBUG - frame=  392 fps=2.5 q=41.0 size=    3584KiB time=00:00:13.00 bitrate=2258.5kbits/s speed=0.0832x
+2024-08-23 15:00:55,877 - DEBUG - frame=  392 fps=2.5 q=41.0 size=    3584KiB time=00:00:13.00 bitrate=2258.5kbits/s speed=0.0829x
+2024-08-23 15:00:56,382 - DEBUG - frame=  392 fps=2.5 q=41.0 size=    3584KiB time=00:00:13.00 bitrate=2258.5kbits/s speed=0.0826x
+2024-08-23 15:00:56,887 - DEBUG - frame=  395 fps=2.5 q=40.0 size=    3584KiB time=00:00:13.10 bitrate=2241.3kbits/s speed=0.083x
+2024-08-23 15:00:57,387 - DEBUG - frame=  400 fps=2.5 q=40.0 size=    3584KiB time=00:00:13.26 bitrate=2213.1kbits/s speed=0.0838x
+2024-08-23 15:00:57,894 - DEBUG - frame=  402 fps=2.5 q=40.0 size=    3584KiB time=00:00:13.33 bitrate=2202.0kbits/s speed=0.084x
+2024-08-23 15:00:58,393 - DEBUG - frame=  407 fps=2.6 q=40.0 size=    3840KiB time=00:00:13.50 bitrate=2330.2kbits/s speed=0.0847x
+2024-08-23 15:00:58,898 - DEBUG - frame=  408 fps=2.6 q=40.0 size=    3840KiB time=00:00:13.53 bitrate=2324.5kbits/s speed=0.0847x
+2024-08-23 15:00:59,402 - DEBUG - frame=  408 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.53 bitrate=2324.5kbits/s speed=0.0844x
+2024-08-23 15:00:59,904 - DEBUG - frame=  409 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.56 bitrate=2318.7kbits/s speed=0.0844x
+2024-08-23 15:01:00,404 - DEBUG - frame=  410 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.60 bitrate=2313.1kbits/s speed=0.0843x
+2024-08-23 15:01:00,906 - DEBUG - frame=  410 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.60 bitrate=2313.1kbits/s speed=0.084x
+2024-08-23 15:01:01,411 - DEBUG - frame=  410 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.60 bitrate=2313.1kbits/s speed=0.0838x
+2024-08-23 15:01:01,913 - DEBUG - frame=  410 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.60 bitrate=2313.1kbits/s speed=0.0835x
+2024-08-23 15:01:02,423 - DEBUG - frame=  410 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.60 bitrate=2313.1kbits/s speed=0.0833x
+2024-08-23 15:01:02,927 - DEBUG - frame=  410 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.60 bitrate=2313.1kbits/s speed=0.083x
+2024-08-23 15:01:03,437 - DEBUG - frame=  411 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.63 bitrate=2307.4kbits/s speed=0.083x
+2024-08-23 15:01:03,943 - DEBUG - frame=  411 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.63 bitrate=2307.4kbits/s speed=0.0827x
+2024-08-23 15:01:04,445 - DEBUG - frame=  415 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.76 bitrate=2285.1kbits/s speed=0.0833x
+2024-08-23 15:01:04,946 - DEBUG - frame=  415 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.76 bitrate=2285.1kbits/s speed=0.083x
+2024-08-23 15:01:05,447 - DEBUG - frame=  419 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.90 bitrate=2263.1kbits/s speed=0.0836x
+2024-08-23 15:01:05,952 - DEBUG - frame=  419 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.90 bitrate=2263.1kbits/s speed=0.0833x
+2024-08-23 15:01:06,462 - DEBUG - frame=  419 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.90 bitrate=2263.1kbits/s speed=0.0831x
+2024-08-23 15:01:06,964 - DEBUG - frame=  419 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.90 bitrate=2263.1kbits/s speed=0.0828x
+2024-08-23 15:01:07,470 - DEBUG - frame=  419 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.90 bitrate=2263.1kbits/s speed=0.0826x
+2024-08-23 15:01:07,971 - DEBUG - frame=  419 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.90 bitrate=2263.1kbits/s speed=0.0823x
+2024-08-23 15:01:08,476 - DEBUG - frame=  419 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.90 bitrate=2263.1kbits/s speed=0.0821x
+2024-08-23 15:01:08,981 - DEBUG - frame=  419 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.90 bitrate=2263.1kbits/s speed=0.0818x
+2024-08-23 15:01:09,486 - DEBUG - frame=  419 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.90 bitrate=2263.1kbits/s speed=0.0816x
+2024-08-23 15:01:09,988 - DEBUG - frame=  419 fps=2.5 q=40.0 size=    3840KiB time=00:00:13.90 bitrate=2263.1kbits/s speed=0.0813x
+2024-08-23 15:01:10,493 - DEBUG - frame=  419 fps=2.4 q=40.0 size=    3840KiB time=00:00:13.90 bitrate=2263.1kbits/s speed=0.0811x
+2024-08-23 15:01:10,998 - DEBUG - frame=  419 fps=2.4 q=40.0 size=    3840KiB time=00:00:13.90 bitrate=2263.1kbits/s speed=0.0809x
+2024-08-23 15:01:11,503 - DEBUG - frame=  419 fps=2.4 q=40.0 size=    3840KiB time=00:00:13.90 bitrate=2263.1kbits/s speed=0.0806x
+2024-08-23 15:01:12,008 - DEBUG - frame=  419 fps=2.4 q=40.0 size=    3840KiB time=00:00:13.90 bitrate=2263.1kbits/s speed=0.0804x
+2024-08-23 15:01:12,510 - DEBUG - frame=  419 fps=2.4 q=40.0 size=    3840KiB time=00:00:13.90 bitrate=2263.1kbits/s speed=0.0802x
+2024-08-23 15:01:13,019 - DEBUG - frame=  419 fps=2.4 q=40.0 size=    3840KiB time=00:00:13.90 bitrate=2263.1kbits/s speed=0.0799x
+2024-08-23 15:01:13,524 - DEBUG - frame=  424 fps=2.4 q=40.0 size=    4096KiB time=00:00:14.06 bitrate=2385.4kbits/s speed=0.0806x
+2024-08-23 15:01:14,028 - DEBUG - frame=  430 fps=2.5 q=40.0 size=    4096KiB time=00:00:14.26 bitrate=2352.0kbits/s speed=0.0816x
+2024-08-23 15:01:14,533 - DEBUG - frame=  434 fps=2.5 q=40.0 size=    4096KiB time=00:00:14.40 bitrate=2330.2kbits/s speed=0.0821x
+2024-08-23 15:01:15,038 - DEBUG - frame=  436 fps=2.5 q=40.0 size=    4096KiB time=00:00:14.46 bitrate=2319.5kbits/s speed=0.0822x
+2024-08-23 15:01:15,543 - DEBUG - frame=  437 fps=2.5 q=40.0 size=    4096KiB time=00:00:14.50 bitrate=2314.1kbits/s speed=0.0822x
+2024-08-23 15:01:16,050 - DEBUG - frame=  437 fps=2.5 q=40.0 size=    4096KiB time=00:00:14.50 bitrate=2314.1kbits/s speed=0.0819x
+2024-08-23 15:01:16,555 - DEBUG - frame=  437 fps=2.5 q=40.0 size=    4096KiB time=00:00:14.50 bitrate=2314.1kbits/s speed=0.0817x
+2024-08-23 15:01:17,055 - DEBUG - frame=  437 fps=2.5 q=40.0 size=    4096KiB time=00:00:14.50 bitrate=2314.1kbits/s speed=0.0815x
+2024-08-23 15:01:17,556 - DEBUG - frame=  437 fps=2.4 q=40.0 size=    4096KiB time=00:00:14.50 bitrate=2314.1kbits/s speed=0.0812x
+2024-08-23 15:01:18,063 - DEBUG - frame=  437 fps=2.4 q=40.0 size=    4096KiB time=00:00:14.50 bitrate=2314.1kbits/s speed=0.081x
+2024-08-23 15:01:18,569 - DEBUG - frame=  437 fps=2.4 q=40.0 size=    4096KiB time=00:00:14.50 bitrate=2314.1kbits/s speed=0.0808x
+2024-08-23 15:01:19,073 - DEBUG - frame=  437 fps=2.4 q=40.0 size=    4096KiB time=00:00:14.50 bitrate=2314.1kbits/s speed=0.0806x
+2024-08-23 15:01:19,579 - DEBUG - frame=  442 fps=2.4 q=40.0 size=    4096KiB time=00:00:14.66 bitrate=2287.8kbits/s speed=0.0813x
+2024-08-23 15:01:20,082 - DEBUG - frame=  446 fps=2.5 q=40.0 size=    4096KiB time=00:00:14.80 bitrate=2267.2kbits/s speed=0.0818x
+2024-08-23 15:01:20,587 - DEBUG - frame=  447 fps=2.5 q=40.0 size=    4096KiB time=00:00:14.83 bitrate=2262.1kbits/s speed=0.0817x
+2024-08-23 15:01:21,092 - DEBUG - frame=  447 fps=2.5 q=40.0 size=    4096KiB time=00:00:14.83 bitrate=2262.1kbits/s speed=0.0815x
+2024-08-23 15:01:21,593 - DEBUG - frame=  447 fps=2.4 q=40.0 size=    4096KiB time=00:00:14.83 bitrate=2262.1kbits/s speed=0.0813x
+2024-08-23 15:01:22,094 - DEBUG - frame=  447 fps=2.4 q=40.0 size=    4096KiB time=00:00:14.83 bitrate=2262.1kbits/s speed=0.0811x
+2024-08-23 15:01:22,599 - DEBUG - frame=  447 fps=2.4 q=40.0 size=    4096KiB time=00:00:14.83 bitrate=2262.1kbits/s speed=0.0808x
+2024-08-23 15:01:23,101 - DEBUG - frame=  447 fps=2.4 q=40.0 size=    4096KiB time=00:00:14.83 bitrate=2262.1kbits/s speed=0.0806x
+2024-08-23 15:01:23,604 - DEBUG - frame=  450 fps=2.4 q=40.0 size=    4096KiB time=00:00:14.93 bitrate=2247.0kbits/s speed=0.0809x
+2024-08-23 15:01:24,106 - DEBUG - frame=  455 fps=2.5 q=40.0 size=    4352KiB time=00:00:15.10 bitrate=2361.1kbits/s speed=0.0816x
+2024-08-23 15:01:24,611 - DEBUG - frame=  460 fps=2.5 q=40.0 size=    4352KiB time=00:00:15.26 bitrate=2335.3kbits/s speed=0.0823x
+2024-08-23 15:01:25,125 - DEBUG - frame=  465 fps=2.5 q=39.0 size=    4352KiB time=00:00:15.43 bitrate=2310.1kbits/s speed=0.083x
+2024-08-23 15:01:25,624 - DEBUG - frame=  465 fps=2.5 q=39.0 size=    4352KiB time=00:00:15.43 bitrate=2310.1kbits/s speed=0.0827x
+2024-08-23 15:01:26,128 - DEBUG - frame=  465 fps=2.5 q=39.0 size=    4352KiB time=00:00:15.43 bitrate=2310.1kbits/s speed=0.0825x
+2024-08-23 15:01:26,633 - DEBUG - frame=  465 fps=2.5 q=39.0 size=    4352KiB time=00:00:15.43 bitrate=2310.1kbits/s speed=0.0823x
+2024-08-23 15:01:27,135 - DEBUG - frame=  465 fps=2.5 q=39.0 size=    4352KiB time=00:00:15.43 bitrate=2310.1kbits/s speed=0.0821x
+2024-08-23 15:01:27,638 - DEBUG - frame=  467 fps=2.5 q=40.0 size=    4352KiB time=00:00:15.50 bitrate=2300.1kbits/s speed=0.0822x
+2024-08-23 15:01:28,140 - DEBUG - frame=  468 fps=2.5 q=40.0 size=    4352KiB time=00:00:15.53 bitrate=2295.2kbits/s speed=0.0822x
+2024-08-23 15:01:28,645 - DEBUG - frame=  470 fps=2.5 q=40.0 size=    4352KiB time=00:00:15.60 bitrate=2285.4kbits/s speed=0.0823x
+2024-08-23 15:01:29,147 - DEBUG - frame=  474 fps=2.5 q=40.0 size=    4352KiB time=00:00:15.73 bitrate=2266.0kbits/s speed=0.0828x
+2024-08-23 15:01:29,647 - DEBUG - frame=  474 fps=2.5 q=40.0 size=    4352KiB time=00:00:15.73 bitrate=2266.0kbits/s speed=0.0826x
+2024-08-23 15:01:30,152 - DEBUG - frame=  474 fps=2.5 q=40.0 size=    4352KiB time=00:00:15.73 bitrate=2266.0kbits/s speed=0.0823x
+2024-08-23 15:01:30,657 - DEBUG - frame=  474 fps=2.5 q=40.0 size=    4352KiB time=00:00:15.73 bitrate=2266.0kbits/s speed=0.0821x
+2024-08-23 15:01:31,162 - DEBUG - frame=  474 fps=2.5 q=40.0 size=    4352KiB time=00:00:15.73 bitrate=2266.0kbits/s speed=0.0819x
+2024-08-23 15:01:31,663 - DEBUG - frame=  474 fps=2.5 q=40.0 size=    4352KiB time=00:00:15.73 bitrate=2266.0kbits/s speed=0.0817x
+2024-08-23 15:01:32,168 - DEBUG - frame=  478 fps=2.5 q=40.0 size=    4352KiB time=00:00:15.86 bitrate=2247.0kbits/s speed=0.0822x
+2024-08-23 15:01:32,674 - DEBUG - frame=  487 fps=2.5 q=42.0 size=    4352KiB time=00:00:16.16 bitrate=2205.3kbits/s speed=0.0835x
+2024-08-23 15:01:33,177 - DEBUG - frame=  492 fps=2.5 q=42.0 size=    4352KiB time=00:00:16.33 bitrate=2182.8kbits/s speed=0.0842x
+2024-08-23 15:01:33,681 - DEBUG - frame=  492 fps=2.5 q=42.0 size=    4352KiB time=00:00:16.33 bitrate=2182.8kbits/s speed=0.0839x
+2024-08-23 15:01:34,185 - DEBUG - frame=  492 fps=2.5 q=42.0 size=    4352KiB time=00:00:16.33 bitrate=2182.8kbits/s speed=0.0837x
+2024-08-23 15:01:34,690 - DEBUG - frame=  492 fps=2.5 q=42.0 size=    4352KiB time=00:00:16.33 bitrate=2182.8kbits/s speed=0.0835x
+2024-08-23 15:01:35,195 - DEBUG - frame=  498 fps=2.5 q=42.0 size=    4352KiB time=00:00:16.53 bitrate=2156.4kbits/s speed=0.0843x
+2024-08-23 15:01:35,700 - DEBUG - frame=  507 fps=2.6 q=41.0 size=    4864KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:36,201 - DEBUG - frame=  509 fps=2.6 q=38.0 size=    4864KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:36,702 - DEBUG - frame=  516 fps=2.6 q=38.0 size=    4864KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:37,208 - DEBUG - frame=  525 fps=2.6 q=37.0 size=    4864KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:37,722 - DEBUG - frame=  533 fps=2.7 q=38.0 size=    4864KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:38,226 - DEBUG - frame=  533 fps=2.7 q=38.0 size=    4864KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:38,731 - DEBUG - frame=  533 fps=2.7 q=38.0 size=    4864KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:39,236 - DEBUG - frame=  543 fps=2.7 q=38.0 size=    5120KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:39,747 - DEBUG - frame=  551 fps=2.7 q=37.0 size=    5120KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:40,249 - DEBUG - frame=  551 fps=2.7 q=37.0 size=    5120KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:40,750 - DEBUG - frame=  551 fps=2.7 q=37.0 size=    5120KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:41,255 - DEBUG - frame=  552 fps=2.7 q=36.0 size=    5120KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:41,762 - DEBUG - frame=  561 fps=2.8 q=36.0 size=    5120KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:42,276 - DEBUG - frame=  561 fps=2.8 q=36.0 size=    5120KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:42,773 - DEBUG - frame=  569 fps=2.8 q=36.0 size=    5120KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:43,286 - DEBUG - frame=  569 fps=2.8 q=36.0 size=    5120KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:43,788 - DEBUG - frame=  570 fps=2.8 q=36.0 size=    5120KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:44,289 - DEBUG - frame=  577 fps=2.8 q=36.0 size=    5120KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:44,794 - DEBUG - frame=  587 fps=2.9 q=-1.0 size=    5120KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:45,299 - DEBUG - frame=  588 fps=2.9 q=-1.0 size=    5120KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:45,418 - DEBUG - frame=  595 fps=2.9 q=-1.0 size=    5120KiB time=N/A bitrate=N/A speed=N/A
+2024-08-23 15:01:45,418 - DEBUG - [mp4 @ 0x12fd068c0] Starting second pass: moving the moov atom to the beginning of the file
+2024-08-23 15:01:45,428 - DEBUG - [out#0/mp4 @ 0x12fd051b0] video:4866KiB audio:425KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.404568%
+2024-08-23 15:01:45,428 - DEBUG - frame=  600 fps=2.9 q=-1.0 Lsize=    5313KiB time=00:00:19.93 bitrate=2183.3kbits/s speed=0.0964x
+2024-08-23 15:01:45,445 - DEBUG - [libx264 @ 0x12fd073c0] frame I:3     Avg QP:27.99  size:374393
+2024-08-23 15:01:45,445 - DEBUG - [libx264 @ 0x12fd073c0] frame P:111   Avg QP:28.56  size: 22695
+2024-08-23 15:01:45,445 - DEBUG - [libx264 @ 0x12fd073c0] frame B:486   Avg QP:29.31  size:  2757
+2024-08-23 15:01:45,445 - DEBUG - [libx264 @ 0x12fd073c0] consecutive B-frames:  1.7%  1.7%  3.5% 26.0%  2.5% 10.0%  7.0% 26.7% 21.0%
+2024-08-23 15:01:45,445 - DEBUG - [libx264 @ 0x12fd073c0] mb I  I16..4: 30.0% 61.5%  8.6%
+2024-08-23 15:01:45,445 - DEBUG - [libx264 @ 0x12fd073c0] mb P  I16..4:  2.0%  3.3%  0.2%  P16..4:  4.2%  0.3%  0.3%  0.0%  0.0%    skip:89.8%
+2024-08-23 15:01:45,445 - DEBUG - [libx264 @ 0x12fd073c0] mb B  I16..4:  0.1%  0.1%  0.0%  B16..8:  2.7%  0.1%  0.0%  direct: 0.0%  skip:97.1%  L0:41.9% L1:56.6% BI: 1.5%
+2024-08-23 15:01:45,445 - DEBUG - [libx264 @ 0x12fd073c0] 8x8 transform intra:60.1% inter:49.2%
+2024-08-23 15:01:45,445 - DEBUG - [libx264 @ 0x12fd073c0] direct mvs  spatial:98.1% temporal:1.9%
+2024-08-23 15:01:45,445 - DEBUG - [libx264 @ 0x12fd073c0] coded y,uvDC,uvAC intra: 8.9% 3.7% 1.7% inter: 0.3% 0.2% 0.0%
+2024-08-23 15:01:45,445 - DEBUG - [libx264 @ 0x12fd073c0] i16 v,h,dc,p: 69% 19%  6%  6%
+2024-08-23 15:01:45,445 - DEBUG - [libx264 @ 0x12fd073c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26% 16% 49%  2%  1%  1%  2%  1%  2%
+2024-08-23 15:01:45,445 - DEBUG - [libx264 @ 0x12fd073c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 18% 23% 14%  6%  8%  6%  8%  6% 11%
+2024-08-23 15:01:45,445 - DEBUG - [libx264 @ 0x12fd073c0] i8c dc,h,v,p: 95%  3%  2%  1%
+2024-08-23 15:01:45,446 - DEBUG - [libx264 @ 0x12fd073c0] Weighted P-Frames: Y:0.0% UV:0.0%
+2024-08-23 15:01:45,446 - DEBUG - [libx264 @ 0x12fd073c0] ref P L0: 69.9%  9.7%  6.1%  2.2%  2.3%  1.6%  2.0%  0.8%  1.1%  0.7%  0.9%  0.6%  0.8%  0.6%  0.7%  0.0%
+2024-08-23 15:01:45,446 - DEBUG - [libx264 @ 0x12fd073c0] ref B L0: 75.5% 13.9%  4.2%  1.5%  1.2%  0.8%  0.9%  0.4%  0.5%  0.3%  0.2%  0.2%  0.2%  0.1%  0.1%
+2024-08-23 15:01:45,446 - DEBUG - [libx264 @ 0x12fd073c0] ref B L1: 93.6%  6.4%
+2024-08-23 15:01:45,446 - DEBUG - [libx264 @ 0x12fd073c0] kb/s:1992.94
+2024-08-23 15:01:45,685 - DEBUG - [aac @ 0x13ef79400] Qavg: 8839.155
+2024-08-23 15:01:45,707 - INFO - Video processing completed. Output saved to yamaha_best.mp4
+2024-08-23 15:01:45,708 - INFO - FFmpeg processing script finished
