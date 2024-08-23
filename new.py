@@ -46,7 +46,7 @@ def process_video(input_path, output_path, logger):
         "-c:v",
         "libx264",
         "-pix_fmt",
-        "yuv420p10le",
+        "yuv420p",
         "-c:a",
         "aac",
         "-b:a",
@@ -87,7 +87,7 @@ if __name__ == "__main__":
     logger = setup_logger(log_file)
 
     input_dir = "dataset"
-    output_dir = "out2"
+    output_dir = "out_without_10_bits"
 
     logger.info("FFmpeg high-quality batch processing script started")
     process_directory(input_dir, output_dir, logger)
