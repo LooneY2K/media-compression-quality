@@ -1,4 +1,4 @@
-#!/Users/sabyasachimohanty/Documents/media_process/env/bin/python3.12
+#!/Users/sabyasachimohanty/Documents/media-compression-quality/env/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -1,6 +1,7 @@
 import subprocess
 import logging
 import os
+import json
 from datetime import datetime
 
 
@@ -28,29 +29,90 @@ def run_ffmpeg(args, logger):
         raise subprocess.CalledProcessError(return_code, cmd)
 
 
+def get_video_dimensions(input_path):
+    cmd = [
+        "ffprobe",
+        "-v",
+        "error",
+        "-select_streams",
+        "v:0",
+        "-count_packets",
+        "-show_entries",
+        "stream=width,height",
+        "-of",
+        "json",
+        input_path,
+    ]
+    result = subprocess.run(
+        cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True
+    )
+    if result.returncode != 0:
+        raise ValueError(f"Failed to get video dimensions: {result.stderr}")
+    data = json.loads(result.stdout)
+    if "streams" not in data or not data["streams"]:
+        raise ValueError("No video stream found in the file")
+    width = int(data["streams"][0]["width"])
+    height = int(data["streams"][0]["height"])
+    return width, height
+
+
+def calculate_new_dimensions(width, height):
+    aspect_ratio = width / height
+    if width > height and width >= 1440:
+        new_width = 1440
+        new_height = int(new_width / aspect_ratio)
+    elif height > width and height >= 1440:
+        new_height = 1440
+        new_width = int(new_height * aspect_ratio)
+    elif width == height and width > 1440:
+        new_width = new_height = 1440
+    else:
+        new_width, new_height = width, height
+
+    # Ensure both dimensions are even
+    new_width = new_width if new_width % 2 == 0 else new_width - 1
+    new_height = new_height if new_height % 2 == 0 else new_height - 1
+
+    return new_width, new_height
+
+
 def process_video(input_path, output_path, logger):
+    original_width, original_height = get_video_dimensions(input_path)
+    new_width, new_height = calculate_new_dimensions(original_width, original_height)
+    logger.info(f"Original Dimension: {original_width} X {original_height}")
+    logger.info(f"New Dimension: {new_width} X {new_height}")
     ffmpeg_args = [
         "-y",
         "-i",
         input_path,
         "-preset",
-        "veryslow",
+        "slow",
         "-crf",
-        "18",
+        "17",
         "-maxrate",
-        "6000k",
+        "15M",
         "-bufsize",
-        "9000k",
+        "25M",
         "-vf",
-        "unsharp=5:5:1.0,scale='min(1440,iw)':'-2'",
+        f"scale={new_width}:{new_height}:flags=lanczos",
         "-c:v",
         "libx264",
+        "-x264-params",
+        "ref=6:me=umh:subme=8:rc-lookahead=60",
         "-pix_fmt",
         "yuv420p",
+        "-color_primaries",
+        "bt709",
+        "-color_trc",
+        "bt709",
+        "-colorspace",
+        "bt709",
         "-c:a",
         "aac",
         "-b:a",
-        "192k",
+        "256k",
+        "-ar",
+        "48000",
         "-movflags",
         "+faststart",
         output_path,
@@ -87,7 +149,7 @@ if __name__ == "__main__":
     logger = setup_logger(log_file)
 
     input_dir = "dataset"
-    output_dir = "out_without_10_bits"
+    output_dir = "out_1itr_final"
 
     logger.info("FFmpeg high-quality batch processing script started")
     process_directory(input_dir, output_dir, logger)

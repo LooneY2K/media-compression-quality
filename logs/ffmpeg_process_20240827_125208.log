@@ -1,0 +1,64 @@
+2024-08-27 12:52:08,460 - INFO - FFmpeg high-quality batch processing script started
+2024-08-27 12:52:08,525 - INFO - Original Dimension: 3374 X 4500
+2024-08-27 12:52:08,525 - INFO - New Dimension: 1078 X 1440
+2024-08-27 12:52:08,525 - INFO - Starting first pass for video processing
+2024-08-27 12:52:08,525 - INFO - Executing FFmpeg command: ffmpeg -y -i dataset/yamaha_best.mp4 -preset veryslow -b:v 3500k -maxrate 4000k -bufsize 7000k -vf unsharp=5:5:1.0,scale='if(gt(iw,1440),if(gte(iw,ih),1440,-2),iw)':'if(gt(ih,1440),if(gt(ih,iw),1440,-2),ih)':flags=lanczos -pass 1 -f mp4 /dev/null
+2024-08-27 12:52:08,550 - DEBUG - ffmpeg version 7.0.2 Copyright (c) 2000-2024 the FFmpeg developers
+2024-08-27 12:52:08,550 - DEBUG - built with Apple clang version 15.0.0 (clang-1500.3.9.4)
+2024-08-27 12:52:08,550 - DEBUG - configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/7.0.2 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox --enable-neon
+2024-08-27 12:52:08,550 - DEBUG - libavutil      59.  8.100 / 59.  8.100
+2024-08-27 12:52:08,550 - DEBUG - libavcodec     61.  3.100 / 61.  3.100
+2024-08-27 12:52:08,550 - DEBUG - libavformat    61.  1.100 / 61.  1.100
+2024-08-27 12:52:08,550 - DEBUG - libavdevice    61.  1.100 / 61.  1.100
+2024-08-27 12:52:08,550 - DEBUG - libavfilter    10.  1.100 / 10.  1.100
+2024-08-27 12:52:08,550 - DEBUG - libswscale      8.  1.100 /  8.  1.100
+2024-08-27 12:52:08,550 - DEBUG - libswresample   5.  1.100 /  5.  1.100
+2024-08-27 12:52:08,550 - DEBUG - libpostproc    58.  1.100 / 58.  1.100
+2024-08-27 12:52:08,582 - DEBUG - Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'dataset/yamaha_best.mp4':
+2024-08-27 12:52:08,582 - DEBUG - Metadata:
+2024-08-27 12:52:08,582 - DEBUG - major_brand     : isom
+2024-08-27 12:52:08,582 - DEBUG - minor_version   : 512
+2024-08-27 12:52:08,582 - DEBUG - compatible_brands: isomiso2avc1mp41
+2024-08-27 12:52:08,582 - DEBUG - encoder         : Lavf61.1.100
+2024-08-27 12:52:08,582 - DEBUG - Duration: 00:00:20.01, start: 0.000000, bitrate: 2174 kb/s
+2024-08-27 12:52:08,582 - DEBUG - Stream #0:0[0x1](eng): Video: h264 (High 10) (avc1 / 0x31637661), yuv420p10le(tv, bt709, progressive), 3374x4500, 1993 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+2024-08-27 12:52:08,582 - DEBUG - Metadata:
+2024-08-27 12:52:08,582 - DEBUG - handler_name    : ?Mainconcept Video Media Handler
+2024-08-27 12:52:08,582 - DEBUG - vendor_id       : [0][0][0][0]
+2024-08-27 12:52:08,582 - DEBUG - encoder         : Lavc61.3.100 libx264
+2024-08-27 12:52:08,582 - DEBUG - Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 173 kb/s (default)
+2024-08-27 12:52:08,582 - DEBUG - Metadata:
+2024-08-27 12:52:08,582 - DEBUG - handler_name    : #Mainconcept MP4 Sound Media Handler
+2024-08-27 12:52:08,582 - DEBUG - vendor_id       : [0][0][0][0]
+2024-08-27 12:52:08,585 - DEBUG - Stream mapping:
+2024-08-27 12:52:08,585 - DEBUG - Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+2024-08-27 12:52:08,585 - DEBUG - Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+2024-08-27 12:52:08,585 - DEBUG - Press [q] to stop, [?] for help
+2024-08-27 12:52:08,690 - DEBUG - [libx264 @ 0x122013000] using cpu capabilities: ARMv8 NEON
+2024-08-27 12:52:08,692 - DEBUG - [libx264 @ 0x122013000] profile High 10, level 4.0, 4:2:0, 10-bit
+2024-08-27 12:52:08,692 - DEBUG - [libx264 @ 0x122013000] 264 - core 164 r3108 31e19f9 - H.264/MPEG-4 AVC codec - Copyleft 2003-2023 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x1:0 me=dia subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=0 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=18 lookahead_threads=11 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=8 b_pyramid=2 b_adapt=2 b_bias=0 direct=3 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=60 rc=abr mbtree=1 bitrate=3500 ratetol=1.0 qcomp=0.60 qpmin=0 qpmax=81 qpstep=4 vbv_maxrate=4000 vbv_bufsize=7000 nal_hrd=none filler=0 ip_ratio=1.40 aq=1:1.00
+2024-08-27 12:52:08,692 - DEBUG - Output #0, mp4, to '/dev/null':
+2024-08-27 12:52:08,692 - DEBUG - Metadata:
+2024-08-27 12:52:08,692 - DEBUG - major_brand     : isom
+2024-08-27 12:52:08,692 - DEBUG - minor_version   : 512
+2024-08-27 12:52:08,692 - DEBUG - compatible_brands: isomiso2avc1mp41
+2024-08-27 12:52:08,692 - DEBUG - encoder         : Lavf61.1.100
+2024-08-27 12:52:08,692 - DEBUG - Stream #0:0(eng): Video: h264 (avc1 / 0x31637661), yuv420p10le(tv, bt709, progressive), 1080x1440, q=2-31, 3500 kb/s, 30 fps, 15360 tbn (default)
+2024-08-27 12:52:08,692 - DEBUG - Metadata:
+2024-08-27 12:52:08,692 - DEBUG - handler_name    : ?Mainconcept Video Media Handler
+2024-08-27 12:52:08,692 - DEBUG - vendor_id       : [0][0][0][0]
+2024-08-27 12:52:08,692 - DEBUG - encoder         : Lavc61.3.100 libx264
+2024-08-27 12:52:08,692 - DEBUG - Side data:
+2024-08-27 12:52:08,692 - DEBUG - cpb: bitrate max/min/avg: 4000000/0/3500000 buffer size: 7000000 vbv_delay: N/A
+2024-08-27 12:52:08,692 - DEBUG - Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
+2024-08-27 12:52:08,692 - DEBUG - Metadata:
+2024-08-27 12:52:08,692 - DEBUG - handler_name    : #Mainconcept MP4 Sound Media Handler
+2024-08-27 12:52:08,692 - DEBUG - vendor_id       : [0][0][0][0]
+2024-08-27 12:52:08,692 - DEBUG - encoder         : Lavc61.3.100 aac
+2024-08-27 12:52:09,595 - DEBUG - frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A
+2024-08-27 12:52:10,096 - DEBUG - frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A
+2024-08-27 12:52:10,599 - DEBUG - frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A
+2024-08-27 12:52:11,100 - DEBUG - frame=   21 fps= 10 q=28.0 size=       0KiB time=00:00:00.63 bitrate=   0.6kbits/s speed=0.314x
+2024-08-27 12:52:11,604 - DEBUG - frame=   48 fps= 19 q=23.0 size=       0KiB time=00:00:01.53 bitrate=   0.3kbits/s speed=0.61x
+2024-08-27 12:52:12,107 - DEBUG - frame=   81 fps= 27 q=23.0 size=       0KiB time=00:00:02.63 bitrate=   0.1kbits/s speed=0.872x
+2024-08-27 12:52:12,609 - DEBUG - frame=  111 fps= 32 q=22.0 size=     256KiB time=00:00:03.63 bitrate= 577.3kbits/s speed=1.03x
