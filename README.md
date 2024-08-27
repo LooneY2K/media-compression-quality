@@ -22,7 +22,7 @@ rc-lookahead=60: Sets the number of frames to look ahead for frametype and ratec
 -ar 48000: Sets the audio sample rate to 48 kHz.
 -movflags +faststart: Optimizes the output file for web streaming by moving the MOOV atom to the beginning of the file.
 
-###################################################################################################################################################################################################
+#######################################################################################################
 #Two Iteration FFMPEG arguments detail:
 First pass: Analyzes the video to gather data for optimal encoding
 Second pass: Uses the data from the first pass to encode the video with optimal settings
